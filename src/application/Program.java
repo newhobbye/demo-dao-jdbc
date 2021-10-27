@@ -1,6 +1,7 @@
 package application;
 
 import java.util.List;
+import java.util.Scanner;
 
 import model.dao.DaoFactory;
 import model.dao.SellerDao;
@@ -10,6 +11,8 @@ import model.entities.Seller;
 public class Program {
 
 	public static void main(String[] args) {
+		
+		Scanner sc = new Scanner(System.in);
 		
 		
 		SellerDao sellerdao = DaoFactory.createSellerDao(); //injeção de dependencia.
@@ -44,6 +47,18 @@ public class Program {
 			seller.setName("Martha Wayne");
 			sellerdao.update(seller);
 			System.out.println("Update complete!");
+			
+			System.out.println("=== Teste 6, Seller Update ===");
+			System.out.println("Digite o id a ser deletado: ");
+			int id = sc.nextInt();
+			sc.nextLine();
+			
+			sellerdao.deleteById(id);
+			
+			System.out.println("Deletado! id escolhido: " + id);
+			
+			sc.close();
+
 
 		}
 	}
