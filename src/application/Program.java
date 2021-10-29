@@ -28,7 +28,7 @@ public class Program {
 			System.out.println(obj);
 		}
 		
-		System.out.println("=== Teste 3, Seller findByDepartmentId ===");
+		System.out.println("=== Teste 3, Seller findAll ===");
 		list = sellerdao.findAll();
 		for(Seller obj : list) {
 			System.out.println(obj);
@@ -48,7 +48,7 @@ public class Program {
 			sellerdao.update(seller);
 			System.out.println("Update complete!");
 			
-			System.out.println("=== Teste 6, Seller Update ===");
+			System.out.println("=== Teste 6, Seller Delete ===");
 			System.out.println("Digite o id a ser deletado: ");
 			int id = sc.nextInt();
 			sc.nextLine();
